@@ -6,6 +6,7 @@ import {
     getFilteredRowModel,
     getPaginationRowModel,
     useReactTable,
+    PaginationState
 } from "@tanstack/react-table";
 
 import {
@@ -35,7 +36,7 @@ const DataTable = <TData,TValue>({columns, route}: TableProps<TData,TValue>) => 
         pageSize: 10
     })
 
-    const {data = {},isFetching,refetch} = useGetPaginatedQuery({
+    const {data = {},isFetching} = useGetPaginatedQuery({
         route:	route,
 		result: pageSize,
 		page: 	pageIndex,
