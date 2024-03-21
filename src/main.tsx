@@ -18,7 +18,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <Theme>
-          <ThemeProvider  defaultTheme="dark" storageKey="vite-ui-theme">
+          <ThemeProvider  
+              defaultTheme="light" 
+              storageKey="vite-ui-theme"
+            >
             <RouterProvider router={router}/>
           </ThemeProvider>
         </Theme>
